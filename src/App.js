@@ -1,39 +1,16 @@
-import React from 'react';
-
-import Input from './components/input';
-import './App.css';
-import TodoItem from './components/TodoItem';
-
-
-const todoList=[{
-  item:'todo',
-        done:false,
-        id:116555
-},
-{
-  item:'todo',
-        done:true,
-        id:75486
-}]
+import { Container, Heading } from '@chakra-ui/react';
+import { AddTodo } from './components/AddTodo';
+import { TodoList } from './components/TodoList';
+import { VisibilityFilter } from './components/VisibilityFilter';
 
 function App() {
   return (
-    <div className="App">
-      <div className="app_container">
-        <div className="app_todoContainer">
-          {
-            todoList.map(item=>(
-              <TodoItem
-              name={item.task}
-              done={item.done}
-              id={item.id}
-              />
-            ))
-          }
-        </div>
-     <Input/>
-    </div>
-    </div>
+    <Container maxW="container.sm">
+      <Heading my="4">Todo List</Heading>
+      <AddTodo />
+      <TodoList />
+      <VisibilityFilter />
+    </Container>
   );
 }
 
