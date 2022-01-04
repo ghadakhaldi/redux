@@ -1,4 +1,4 @@
-import { ADD_TODO, TOGGLE_TODO } from './actionsTypes';
+import { ADD_TODO, TOGGLE_TODO } from '../actionsTypes.js';
 
 const initialState = {
   todos: []
